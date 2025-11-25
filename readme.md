@@ -38,10 +38,10 @@ node --version
 ```
 Must show v18 or higher.
 If not installed → Download from:
-👉 https://nodejs.org (LTS version recommended)
+👉 [Node.js LTS](https://nodejs.org) (LTS version recommended)
 
 ## 🔥 STEP 1 — GET YOUR FREE GOOGLE API KEY
-Go to: https://aistudio.google.com  
+Go to: [Google AI Studio](https://aistudio.google.com)  
 Click "Get API key"  
 Click "Create API key"  
 Copy your key (looks like):
@@ -197,16 +197,50 @@ ccr start
 Wait for:
 ```
 ✔ Service started successfully
+or
+⚠️ API key is not set. HOST is forced to 127.0.0.1.
+Loaded JSON config from: C:\Users\User\.claude-code-router\config.json
 ```
 
-### Terminal 2 — Start coding!
-**Option 1:**
+### Terminal 2 — Start Coding (Cross-Platform)
+#### macOS / Linux Option 1:
 ```bash
 ccr code
 ```
-**Option 2 (recommended):**
+#### macOS / Linux Option 2 (Recommended):
 ```bash
+# Activate Claude environment
 eval "$(ccr activate)"
+
+# Start Claude CLI
+claude
+```
+
+#### Windows CMD:
+```cmd
+set ANTHROPIC_AUTH_TOKEN=test
+set ANTHROPIC_API_KEY=
+set ANTHROPIC_BASE_URL=http://127.0.0.1:3456
+set NO_PROXY=127.0.0.1
+set DISABLE_TELEMETRY=true
+set DISABLE_COST_WARNINGS=true
+set API_TIMEOUT_MS=600000
+```
+```cmd
+claude
+```
+
+#### Windows PowerShell:
+```powershell
+$env:ANTHROPIC_AUTH_TOKEN = "test"
+$env:ANTHROPIC_API_KEY = ""
+$env:ANTHROPIC_BASE_URL = "http://127.0.0.1:3456"
+$env:NO_PROXY = "127.0.0.1"
+$env:DISABLE_TELEMETRY = "true"
+$env:DISABLE_COST_WARNINGS = "true"
+$env:API_TIMEOUT_MS = "600000"
+```
+```powershell
 claude
 ```
 **Test it:**  
@@ -215,16 +249,16 @@ Type `hi` → Claude should reply → 🎉 Success!
 ---
 
 ## ⚠️ Troubleshooting
-| Problem               | Solution                                                                |
+| Problem | Solution |
 | :-------------------- | :---------------------------------------------------------------------- |
-| `mkdir` error         | Use `-Force` (Windows) or `-p` (macOS/Linux) with `New-Item` / `mkdir` |
-| "API key not found"   | Restart terminal after setting environment variable                     |
-| `ccr: command not found` | Close & reopen terminal, or restart computer                           |
+| `mkdir` error | Use `-Force` (Windows) or `-p` (macOS/Linux) with `New-Item` / `mkdir` |
+| "API key not found" | Restart terminal after setting environment variable |
+| `ccr: command not found` | Close & reopen terminal, or restart computer |
 | Port 3456 already in use | Kill process: `taskkill //F //PID <pid>` (Win) or `kill -9 <pid>` (Unix) |
 
 ## 🎥 Video Tutorial
 Full step-by-step video (with voice):
-👉 https://www.youtube.com/watch?v=HQ6dqd7QY38
+👉 [Watch on YouTube](https://www.youtube.com/watch?v=HQ6dqd7QY38)
 
 ## 🙌 Author
 Hamid Raza
