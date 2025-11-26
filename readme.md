@@ -99,8 +99,8 @@ Paste this exact JSON:
       "api_base_url": "https://generativelanguage.googleapis.com/v1beta/models/",
       "api_key": "$GOOGLE_API_KEY",
       "models": [
-        "gemini-1.5-flash",
-        "gemini-1.5-flash-exp-0827"
+        "gemini-2.5-flash",
+        "gemini-2.0-flash"
       ],
       "transformer": {
         "use": ["gemini"]
@@ -108,10 +108,10 @@ Paste this exact JSON:
     }
   ],
   "Router": {
-    "default": "gemini,gemini-1.5-flash",
-    "background": "gemini,gemini-1.5-flash",
-    "think": "gemini,gemini-1.5-flash",
-    "longContext": "gemini,gemini-1.5-flash",
+    "default": "gemini,gemini-2.5-flash",
+    "background": "gemini,gemini-2.5-flash",
+    "think": "gemini,gemini-2.5-flash",
+    "longContext": "gemini,gemini-2.5-flash",
     "longContextThreshold": 60000
   }
 }
@@ -133,8 +133,8 @@ cat > ~/.claude-code-router/config.json << 'EOF'
       "api_base_url": "https://generativelanguage.googleapis.com/v1beta/models/",
       "api_key": "$GOOGLE_API_KEY",
       "models": [
-        "gemini-1.5-flash",
-        "gemini-1.5-flash-exp-0827"
+        "gemini-2.5-flash",
+        "gemini-2.0-flash"
       ],
       "transformer": {
         "use": ["gemini"]
@@ -142,10 +142,10 @@ cat > ~/.claude-code-router/config.json << 'EOF'
     }
   ],
   "Router": {
-    "default": "gemini,gemini-1.5-flash",
-    "background": "gemini,gemini-1.5-flash",
-    "think": "gemini,gemini-1.5-flash",
-    "longContext": "gemini,gemini-1.5-flash",
+    "default": "gemini,gemini-2.5-flash",
+    "background": "gemini,gemini-2.5-flash",
+    "think": "gemini,gemini-2.5-flash",
+    "longContext": "gemini,gemini-2.5-flash",
     "longContextThreshold": 60000
   }
 }
